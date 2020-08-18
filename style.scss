@@ -1,0 +1,295 @@
+// main rules
+$mainColor: #3f51b5;
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// navbar
+.navbar {
+  background: $mainColor;
+  .navbar-nav .nav-link {
+    color: #fff;
+    padding-left: 0;
+    &:hover {
+      color: #fff;
+    }
+    &.hvr-underline-from-left:before {
+      height: 1px;
+      background: #fff;
+    }
+  }
+}
+// hero
+.hero {
+  height: calc(100vh - 78px);
+  position: relative;
+  background: $mainColor;
+  .container {
+    width: 100%;
+    height: calc(100% - 227.11px);
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    a:first-child button {
+      color: white;
+      background: darken($mainColor, 20%);
+      transition: all 0.3s ease;
+      border: 1px solid darken($mainColor, 20%);
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+    a:last-child button {
+      color: #000;
+      margin-left: 0.8rem;
+      background: #ffffff;
+      transition: all 0.3s ease;
+      border: 1px solid darken($mainColor, 20%);
+      &:hover {
+        background: darken($mainColor, 20%);
+        color: #fff;
+      }
+    }
+  }
+  svg {
+    position: absolute;
+    bottom: 0;
+  }
+}
+// skills
+#skills {
+  .h1 {
+    position: relative;
+    padding-bottom: 0.2rem;
+    width: fit-content;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: $mainColor;
+    }
+  }
+  .skill-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    span {
+      font-size: 1.1rem;
+    }
+  }
+}
+// portfolio
+#portfolio {
+  .h1 {
+    position: relative;
+    padding-bottom: 0.2rem;
+    width: fit-content;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 75%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: $mainColor;
+    }
+  }
+  .card {
+    border: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    .card-body {
+      border-top: 1px solid #efefef;
+      .card-link {
+        display: block;
+        color: white;
+        background: #252f69;
+        transition: all 0.3s ease;
+        border: 1px solid #252f69;
+        width: fit-content;
+        margin-top: 0.75rem;
+        &:hover {
+          background: #fff;
+          color: #000;
+        }
+      }
+    }
+    .card-img-top {
+      height: 25rem;
+    }
+  }
+}
+// contact
+#contact {
+  background: $mainColor;
+  margin-top: -6.8rem;
+  z-index: 1;
+  position: relative;
+  p {
+    color: white;
+    margin-top: 5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: white;
+    background: darken($mainColor, 10%);
+    margin-bottom: 0;
+  }
+  .container {
+    > h2 {
+      color: #fff;
+      padding-bottom: 0.2rem;
+      position: relative;
+      width: fit-content;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 75%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+      }
+    }
+    .contact-icons {
+      .social {
+        h2 {
+          color: white;
+        }
+        > div > div {
+          margin-top: 2rem;
+        }
+      }
+      .separator {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        span {
+          height: 100%;
+          display: block;
+          background: white;
+          width: 2px;
+        }
+      }
+      .freelance {
+        h2 {
+          color: white;
+        }
+        > div > div {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+}
+// back to top button
+#btotop {
+  position: fixed;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  z-index: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+  background: darken($mainColor, 30%);
+  display: flex;
+  opacity: 0;
+  transition: all 0.2s ease;
+  align-items: center;
+  justify-content: center;
+}
+// responsive
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .navbar-collapse {
+    background: $mainColor;
+  }
+  .navbar .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .hamburger {
+    padding-right: 0;
+  }
+  #contact .social > div {
+    margin-bottom: 1.5rem !important;
+    > div {
+      margin-top: 0 !important;
+    }
+  }
+  #contact .freelance > div > div {
+    margin-top: 0.7rem !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991.98px) {
+  .navbar-dark .navbar-toggler:focus {
+    border: none;
+    outline: none;
+  }
+  #top .hamburger-inner,
+  #top .hamburger-inner:before,
+  .hamburger-inner:after,
+  .hamburger.is-active .hamburger-inner:after {
+    background: white;
+    height: 2px;
+    width: 28px;
+  }
+  .navbar-collapse {
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    z-index: 1;
+  }
+  .navbar .container {
+    justify-content: flex-end;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero .svg {
+    display: flex;
+    justify-content: center;
+    > img {
+      width: 25rem;
+      height: 25rem;
+    }
+  }
+  .hero .content {
+    justify-content: center;
+    align-items: center;
+    h4 {
+      font-size: 1.3rem;
+      margin-left: -14rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+  #contact {
+    margin-top: -1.7rem;
+  }
+}
