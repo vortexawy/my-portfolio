@@ -1,3 +1,8 @@
+// preloader
+$(window).on("load", function () {
+  $(".lds-roller").fadeOut("slow");
+});
+
 // init tooltip
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();
