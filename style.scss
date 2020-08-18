@@ -5,15 +5,15 @@ $mainColor: #3f51b5;
   font-weight: 300 !important;
 }
 // scrollbar
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 13px;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: darken($mainColor, 25%);
   border-radius: 25px;
 }
-::-webkit-scrollbar-track-piece {
+body::-webkit-scrollbar-track-piece {
   background: lighten($mainColor, 40%);
 }
 
@@ -142,7 +142,7 @@ html {
     flex-direction: column;
     align-items: flex-start;
     color: #fff;
-    a:first-child button {
+    a:first-child {
       color: white;
       background: darken($mainColor, 20%);
       transition: all 0.3s ease;
@@ -152,7 +152,7 @@ html {
         color: #000;
       }
     }
-    a:last-child button {
+    a:last-child {
       color: #000;
       margin-left: 0.8rem;
       background: #ffffff;
